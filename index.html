@@ -13,7 +13,9 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
         }
         .container {
             background: rgba(255, 255, 255, 0.9);
@@ -46,10 +48,14 @@
     </div>
 
     <script>
-        let money = 500.000;
+        let money = 500000;
         let wins = 0;
         let sequences = ['Tài','Tài','Tài','Xỉu','Xỉu','Xỉu','Xỉu','Xỉu','Tài','Xỉu','Tài','Xỉu'];
         let index = 0;
+
+        function formatMoney(amount) {
+            return amount.toLocaleString('vi-VN') + 'đ';
+        }
 
         function play(choice) {
             let bet = parseInt(document.getElementById('bet').value) || 0;
@@ -73,14 +79,14 @@
                 document.getElementById('result').innerText = `Bạn đã thua! Kết quả: ${result}`;
             }
 
-            document.getElementById('money').innerText = `Số tiền: ${money}đ`;
+            document.getElementById('money').innerText = `Số tiền: ${formatMoney(money)}`;
             document.getElementById('wins').innerText = `Số lần thắng: ${wins}`;
 
             if (wins === 3) {
                 document.getElementById('reward').innerText = 'Bạn nhận được 30.000đ! Nhấn để nhận';
                 document.getElementById('reward').onclick = function() {
                     money += 30000;
-                    document.getElementById('money').innerText = `Số tiền: ${money}đ`;
+                    document.getElementById('money').innerText = `Số tiền: ${formatMoney(money)}`;
                     wins = 0;
                     document.getElementById('wins').innerText = `Số lần thắng: ${wins}`;
                     document.getElementById('reward').innerText = '';
