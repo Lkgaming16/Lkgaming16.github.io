@@ -48,7 +48,7 @@
     <script>
         let money = 500.000;
         let wins = 0;
-        let sequences = ['Tài','Tài','Tài','Xỉu','Xỉu','Xỉu','Xỉu','Xỉu','Tài','Xỉu','Tài','Xỉu'];
+        let sequences = ['Tài','Xỉu','Tài','Xỉu','Xỉu','Xỉu','Xỉu','Xỉu','Tài','Xỉu','Tài','Xỉu'];
         let index = 0;
 
         function play(choice) {
