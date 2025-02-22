@@ -31,7 +31,7 @@
 </head>
 <body>
     <div class="container" id="game">
-        <h2>Trò chơi đoán xu</h2>
+        <h2>Tai hoac xiu </h2>
         <p id="money">Số tiền: 500000đ</p>
         <p id="mission">Nhiệm vụ: Thắng 3 lần để nhận 30.000đ</p>
         <input type="number" id="bet" placeholder="Nhập số tiền cược" />
